@@ -1,0 +1,13 @@
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(60) NOT NULL,
+  `address` varchar(80) NOT NULL,
+  `zipcode` varchar(15) NOT NULL,
+  `lat` float(10,6) NOT NULL,
+  `lng` float(10,6) NOT NULL  
+  PRIMARY KEY (`id`)
+)
+
+CREATE INDEX idx_lat ON user (lat);
+CREATE INDEX idx_lng ON user (lng);
+CREATE INDEX idx_zipcode ON user (zipcode);
